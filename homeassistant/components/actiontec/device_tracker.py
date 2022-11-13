@@ -31,8 +31,7 @@ PLATFORM_SCHEMA: Final = BASE_PLATFORM_SCHEMA.extend(
 )
 
 
-def get_scanner(
-    hass: HomeAssistant, config: ConfigType
+def get_scanner(config: ConfigType
 ) -> ActiontecDeviceScanner | None:
     """Validate the configuration and return an Actiontec scanner."""
     scanner = ActiontecDeviceScanner(config[DOMAIN])
