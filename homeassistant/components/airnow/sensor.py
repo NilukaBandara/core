@@ -31,24 +31,26 @@ ATTRIBUTION = "Data provided by AirNow"
 
 PARALLEL_UPDATES = 1
 
+MDI_BLUR = "mdi:blur"
+
 SENSOR_TYPES: tuple[SensorEntityDescription, ...] = (
     SensorEntityDescription(
         key=ATTR_API_AQI,
-        icon="mdi:blur",
+        icon=MDI_BLUR,
         name=ATTR_API_AQI,
         native_unit_of_measurement="aqi",
         state_class=SensorStateClass.MEASUREMENT,
     ),
     SensorEntityDescription(
         key=ATTR_API_PM25,
-        icon="mdi:blur",
+        icon=MDI_BLUR,
         name=ATTR_API_PM25,
         native_unit_of_measurement=CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
         state_class=SensorStateClass.MEASUREMENT,
     ),
     SensorEntityDescription(
         key=ATTR_API_O3,
-        icon="mdi:blur",
+        icon=MDI_BLUR,
         name=ATTR_API_O3,
         native_unit_of_measurement=CONCENTRATION_PARTS_PER_MILLION,
         state_class=SensorStateClass.MEASUREMENT,

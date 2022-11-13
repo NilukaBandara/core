@@ -49,6 +49,9 @@ from .const import (
 
 PARALLEL_UPDATES = 1
 
+MDI_WEATHER_CLOUDY = "mdi:weather-cloudy"
+MDI_WEATHER_WINDY = "mdi:weather-windy"
+
 
 @dataclass
 class AccuWeatherSensorDescriptionMixin:
@@ -70,7 +73,7 @@ class AccuWeatherSensorDescription(
 FORECAST_SENSOR_TYPES: tuple[AccuWeatherSensorDescription, ...] = (
     AccuWeatherSensorDescription(
         key="CloudCoverDay",
-        icon="mdi:weather-cloudy",
+        icon=MDI_WEATHER_CLOUDY,
         name="Cloud cover day",
         entity_registry_enabled_default=False,
         unit_fn=lambda _: PERCENTAGE,
@@ -78,7 +81,7 @@ FORECAST_SENSOR_TYPES: tuple[AccuWeatherSensorDescription, ...] = (
     ),
     AccuWeatherSensorDescription(
         key="CloudCoverNight",
-        icon="mdi:weather-cloudy",
+        icon=MDI_WEATHER_CLOUDY,
         name="Cloud cover night",
         entity_registry_enabled_default=False,
         unit_fn=lambda _: PERCENTAGE,
@@ -189,7 +192,7 @@ FORECAST_SENSOR_TYPES: tuple[AccuWeatherSensorDescription, ...] = (
     ),
     AccuWeatherSensorDescription(
         key="WindGustDay",
-        icon="mdi:weather-windy",
+        icon=MDI_WEATHER_WINDY,
         name="Wind gust day",
         entity_registry_enabled_default=False,
         unit_fn=lambda metric: SPEED_KILOMETERS_PER_HOUR
@@ -200,7 +203,7 @@ FORECAST_SENSOR_TYPES: tuple[AccuWeatherSensorDescription, ...] = (
     ),
     AccuWeatherSensorDescription(
         key="WindGustNight",
-        icon="mdi:weather-windy",
+        icon=MDI_WEATHER_WINDY,
         name="Wind gust night",
         entity_registry_enabled_default=False,
         unit_fn=lambda metric: SPEED_KILOMETERS_PER_HOUR
@@ -211,7 +214,7 @@ FORECAST_SENSOR_TYPES: tuple[AccuWeatherSensorDescription, ...] = (
     ),
     AccuWeatherSensorDescription(
         key="WindDay",
-        icon="mdi:weather-windy",
+        icon=MDI_WEATHER_WINDY,
         name="Wind day",
         unit_fn=lambda metric: SPEED_KILOMETERS_PER_HOUR
         if metric
@@ -221,7 +224,7 @@ FORECAST_SENSOR_TYPES: tuple[AccuWeatherSensorDescription, ...] = (
     ),
     AccuWeatherSensorDescription(
         key="WindNight",
-        icon="mdi:weather-windy",
+        icon=MDI_WEATHER_WINDY,
         name="Wind night",
         unit_fn=lambda metric: SPEED_KILOMETERS_PER_HOUR
         if metric
@@ -251,7 +254,7 @@ SENSOR_TYPES: tuple[AccuWeatherSensorDescription, ...] = (
     ),
     AccuWeatherSensorDescription(
         key="CloudCover",
-        icon="mdi:weather-cloudy",
+        icon=MDI_WEATHER_CLOUDY,
         name="Cloud cover",
         entity_registry_enabled_default=False,
         state_class=SensorStateClass.MEASUREMENT,
@@ -329,7 +332,7 @@ SENSOR_TYPES: tuple[AccuWeatherSensorDescription, ...] = (
     ),
     AccuWeatherSensorDescription(
         key="Wind",
-        icon="mdi:weather-windy",
+        icon=MDI_WEATHER_WINDY,
         name="Wind",
         state_class=SensorStateClass.MEASUREMENT,
         unit_fn=lambda metric: SPEED_KILOMETERS_PER_HOUR
@@ -339,7 +342,7 @@ SENSOR_TYPES: tuple[AccuWeatherSensorDescription, ...] = (
     ),
     AccuWeatherSensorDescription(
         key="WindGust",
-        icon="mdi:weather-windy",
+        icon=MDI_WEATHER_WINDY,
         name="Wind gust",
         entity_registry_enabled_default=False,
         state_class=SensorStateClass.MEASUREMENT,
